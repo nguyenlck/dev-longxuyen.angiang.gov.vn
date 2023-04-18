@@ -1065,8 +1065,8 @@ header.header-v2 {
   position: relative;
 }
 header.header-v2 .header-main {
-  background: #222222;
-  padding: 25px 0;
+  background: url(http://localhost/dev-longxuyen.angiang.gov.vn/sites/default/files/other/bg-header.png) top center no-repeat scroll;
+  padding: 25px 0 0 0;
 }
 header.header-v2 .header-main .site-branding {
   padding-top: 10px;
@@ -1402,7 +1402,7 @@ header.header-v4 .block {
   padding: 0;
 }
 .footer .footer-center {
-  padding: 45px 0 30px;
+  padding: 40px 0 30px;
 }
 .footer .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -1413,7 +1413,9 @@ header.header-v4 .block {
   background: #1C1C1C;
 }
 .copyright .copyright-inner {
-  padding: 20px 0;
+  padding: 5px 0;
+  border-top: 1px solid;
+  border-color: #dddddd;
 }
 .copyright .copyright-inner .block {
   margin: 0;
@@ -10893,4 +10895,57 @@ div#acquia-agent-no-search {
 }
 .gavias_customize_form .form-group.action input#gavias_customize_reset {
   background: #f0ad4e;
+}
+
+.footer .fa-facebook{
+	 background: #3B5998;
+    color: white;
+	
+	margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+.footer .fa-zalo {
+    background: #0065F7;
+    font-family: Inter;
+    font-weight: bold;
+    color: white;
+	
+    padding-left: 10px;
+    padding-right: 20px;
+	margin-top: 10px;
+    margin-right: 10px;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+.footer .fa-zalo:before{
+	content: "Zalo";
+	font-size: 15px;
+}
+.footer .fa-youtube {
+    background: #bb0000;
+    color: white;
+	
+	margin-top: 10px;
+    margin-right: 10px;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+.footer .footer-logo{
+	width:100%;
+	margin-top:12px;
 }
