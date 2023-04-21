@@ -67,6 +67,37 @@
         {% include addon_template %}
       </div>  
     {% endif %}
+	<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v16.0" nonce="knjC71ek"></script>
+	<!-- Load Facebook SDK for JavaScript -->
 	<script src="https://sp.zalo.me/plugins/sdk.js"></script>
+	<script>
+		Let buttons = document.querySelector('.buttons');
+		Let btn = buttons.querySelectorAll('.btn');
+		for(var i=0; i< btn.length; i++){
+		btn[i].addEventListener('click', function(){
+		Let current = document.getElementsByClassName('active');
+		current[0].className = current[0].className.replace("active", "");
+		this.className += " active";
+		})
+	</script>
+	<script type="text/javascript">
+	   function printDiv(text) {
+		   var printContents = document.getElementById(text).innerHTML;
+		   var originalContents = document.body.innerHTML;
+		   document.body.innerHTML = "<html><head><title></title></head><body>" + printContents + "</body>";
+		   window.print();
+		   document.body.innerHTML = originalContents;
+	   }
+	  
+	</script>
   </body>
 </html>

@@ -16,23 +16,37 @@
 <article{{ attributes.addClass(classes) }}>
   <div class="post-block article-detail">
     <div class="block">
-      
+      <h1{{ title_attributes.addClass('post-title') }}>{{ label }}</h1>
       <div class="post-top">
-        <div class="post-meta category-background">{{ content.field_post_category }}<span class="post-created"> {{ date }}</span> / <span class="post-comment">{{ comment_count }} {{ 'Comments'|t }}</span> </div>
+        <div class="post-meta category-background">{{ content.field_post_category }}
+		<span class="post-created"> {{ date|date('d/m/Y') }}</span>
+		<!--<span class="post-comment">
+				<span class="btn active" onclick="document.getElementById('text').style.fontSize ='14px'">-</span>
+				<span class="btn active" onclick="document.getElementById('text').style.fontSize ='16px'">aA</span>
+				<span class="btn active" onclick="document.getElementById('text').style.fontSize ='20px'">+</span>
+		</span> 
+		<button style="margin-right:5px" onclick="printDiv('text')"><i class="fa fa-print" aria-hidden="true"></i>
+				</button> -->
+		</div>
         
-        <h1{{ title_attributes.addClass('post-title') }}>{{ label }}</h1>
+       
       </div>  
-
+		<!--
       <div class="post-thumbnail">
         {{ content.field_image }}
       </div>
-
-      <div class="post-content">
+		-->
+      <div class="post-content" id="text">
         <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
           {{ content|without('field_image', 'field_post_category', 'field_tags', 'field_post_format', 'field_post_type', 'field_post_embed', 'field_post_gallery','field_taxonomy_color' ,'comment', 'links') }}
         </div>
         <div class="post-tags clearfix">
-          {{ content.field_tags }}
+          <span class="post-comment">
+		  <div class="fb-like" data-href="" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
+			<!--<div class="fb-share-button" style="margin-left:10px" data-href="" data-layout="button_count"></div>-->
+			 
+		</span> 
+		
         </div>  
       </div>
 
